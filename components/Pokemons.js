@@ -7,6 +7,7 @@ import {
     TouchableOpacity,
     StyleSheet,
     TextInput,
+    Button, Alert 
   } from 'react-native';
 
   const Pokemons = (props) =>{
@@ -25,6 +26,7 @@ import {
 
         return (
             <View>
+                
                 <View style={styles.searchCont}>
                     <TextInput
                     style={styles.searchfeild}
@@ -32,6 +34,17 @@ import {
                     onChangeText={value => setSearchfeild(value)}
                     value={searchfeild}
                     />
+                    <Button
+                      title="Tocame"
+                      onPress={() =>
+                        props.navigation.navigate('Camara')}
+                    />
+                    <Button
+                      title="Mapa"
+                      onPress={() =>
+                        props.navigation.navigate('MapsLocation')}
+                    />
+                   
                 </View>
                 <ScrollView>
                     <View style={styles.container}>
@@ -41,6 +54,7 @@ import {
                         )
                         .map((pokemon, index) => {
                         return (
+                          
                             <TouchableOpacity
                             activeOpacity={0.5}
                             key={index}

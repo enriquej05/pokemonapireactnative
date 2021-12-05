@@ -5,12 +5,22 @@ import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import Pokemons from './components/Pokemons';
 import Details from './components/Details';
+import Camara from './components/Camara';
+import MapsLocation from './components/MapsLocation'
+// import Location from './components/Locacion';
 // import Pokemons from './Components/Pokemons';
 
 const appNavigator = createStackNavigator({
   
+ 
   Details: {
     screen: Details,
+  },
+  MapsLocation: {
+    screen: MapsLocation,
+  },
+  Camara: {
+    screen: Camara,
   },
   Home: {
     screen: Pokemons,
